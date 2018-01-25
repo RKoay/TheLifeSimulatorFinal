@@ -2238,6 +2238,7 @@ namespace TheLifeSimulator
                     workperfLabel.BackColor = Color.LightBlue;
                     workperfLabel.Text = "Work Performance";
                     workperfLabel.Visible = true;
+                    instructions.BackColor = Color.LightBlue;
 
                     workperfBar(520, 40);
 
@@ -3220,6 +3221,7 @@ namespace TheLifeSimulator
                     workperfLabel.BackColor = Color.LightBlue;
                     workperfLabel.Text = "Work Performance";
                     workperfLabel.Visible = true;
+                    instructions.BackColor = Color.LightBlue;
 
                     workperfBar(520, 40);
 
