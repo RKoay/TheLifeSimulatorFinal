@@ -47,6 +47,7 @@
             this.hygieneClock = new System.Windows.Forms.Timer(this.components);
             this.timerClock = new System.Windows.Forms.Timer(this.components);
             this.otherImage = new System.Windows.Forms.Label();
+            this.instructions = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -177,12 +178,25 @@
             this.otherImage.TabIndex = 13;
             this.otherImage.Visible = false;
             // 
+            // instructions
+            // 
+            this.instructions.AutoSize = true;
+            this.instructions.BackColor = System.Drawing.Color.Pink;
+            this.instructions.Font = new System.Drawing.Font("Perpetua", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instructions.Location = new System.Drawing.Point(525, 571);
+            this.instructions.Name = "instructions";
+            this.instructions.Size = new System.Drawing.Size(11, 16);
+            this.instructions.TabIndex = 14;
+            this.instructions.Text = " ";
+            this.instructions.Visible = false;
+            // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1027, 687);
+            this.Controls.Add(this.instructions);
             this.Controls.Add(this.otherImage);
             this.Controls.Add(this.bankmoneyLabel);
             this.Controls.Add(this.bankLabel);
@@ -229,6 +243,7 @@
         private System.Windows.Forms.Timer hygieneClock;
         private System.Windows.Forms.Timer timerClock;
         private System.Windows.Forms.Label otherImage;
+        private System.Windows.Forms.Label instructions;
     }
 }
 

@@ -1461,14 +1461,14 @@ namespace TheLifeSimulator
                 else if (scene == 12 && perf > 60) { scene = 21; }
                 else if (scene == 11 && perf > 60) { scene = 16; }
                 else if (scene == 13 && perf > 60) { scene = 20; }
-                else if (scene == 15) { scene = 22; }
-                else if (scene == 19) { scene = 26; }
-                else if (scene == 14) { scene = 23; }
-                else if (scene == 18) { scene = 27; }
-                else if (scene == 17) { scene = 24; }
-                else if (scene == 21) { scene = 28; }
-                else if (scene == 16) { scene = 25; }
-                else if (scene == 20) { scene = 29; }
+                else if (scene == 15) { scene = 23; }
+                else if (scene == 19) { scene = 27; }
+                else if (scene == 14) { scene = 22; }
+                else if (scene == 18) { scene = 26; }
+                else if (scene == 17) { scene = 25; }
+                else if (scene == 21) { scene = 29; }
+                else if (scene == 16) { scene = 24; }
+                else if (scene == 20) { scene = 28; }
 
 
             }
@@ -1478,14 +1478,14 @@ namespace TheLifeSimulator
                 else if (scene == 2) { scene = 5; }//guy
                 else if (scene == 4) { scene = 8; }//naming girltwo
                 else if (scene == 5) { scene = 9; }//naming guytwo
-                else if (scene == 22) { scene = 10; }
-                else if (scene == 26) { scene = 12; }
-                else if (scene == 23) { scene = 11; }
-                else if (scene == 27) { scene = 13; }
-                else if (scene == 24) { scene = 10; }
-                else if (scene == 28) { scene = 12; }
-                else if (scene == 25) { scene = 11; }
-                else if (scene == 29) { scene = 13; }
+                else if (scene == 22) { Close(); }
+                else if (scene == 26) { Close(); }
+                else if (scene == 23) { Close(); }
+                else if (scene == 27) { Close(); }
+                else if (scene == 24) { Close(); }
+                else if (scene == 28) { Close(); }
+                else if (scene == 25) { Close(); }
+                else if (scene == 29) { Close(); }
             }
             if (e.KeyCode == Keys.I)
             {
@@ -1741,6 +1741,10 @@ namespace TheLifeSimulator
                         workperfLabel.BackColor = Color.Pink;
                         workperfLabel.Text = "Work Performance";
                         workperfLabel.Visible = true;
+                        instructions.Visible = true;
+                        instructions.Text = "Walk to fridge to fill up hunger" + "\n" + "Walk to the desk to work" + "\n" + "Walk to the toilet to pee" 
+                                       + "\n" + "Walk to the tub to wash up" + "\n" + "Press Y to chat";
+
 
                         workperfBar(520, 40);
 
@@ -2257,6 +2261,9 @@ namespace TheLifeSimulator
                     entertainmentlabel.Text = "Entertainment";
                     loolabel.Text = "Loo";
                     hygienelabel.Text = "Hygiene";
+                    instructions.Visible = true;
+                    instructions.Text = "Walk to fridge to fill up hunger" + "\n" + "Walk to the desk to work" + "\n" + "Walk to the toilet to pee"
+                                   + "\n" + "Walk to the tub to wash up" + "\n" + "Press Y to chat";
 
                     hungerBar(250, 10);
                     entertainmentBar(250, 40);
@@ -2746,6 +2753,9 @@ namespace TheLifeSimulator
                     entertainmentlabel.Text = "Entertainment";
                     loolabel.Text = "Loo";
                     hygienelabel.Text = "Hygiene";
+                    instructions.Visible = true;
+                    instructions.Text = "Walk to fridge to fill up hunger" + "\n" + "Walk to the desk to work" + "\n" + "Walk to the toilet to pee"
+                                   + "\n" + "Walk to the tub to wash up" + "\n" + "Press Y to chat";
 
                     hungerBar(250, 10);
                     entertainmentBar(250, 40);
@@ -3233,6 +3243,9 @@ namespace TheLifeSimulator
                     entertainmentlabel.Text = "Entertainment";
                     loolabel.Text = "Loo";
                     hygienelabel.Text = "Hygiene";
+                    instructions.Visible = true;
+                    instructions.Text = "Walk to fridge to fill up hunger" + "\n" + "Walk to the desk to work" + "\n" + "Walk to the toilet to pee"
+                                   + "\n" + "Walk to the tub to wash up" + "\n" + "Press Y to chat";
 
                     hungerBar(250, 10);
                     entertainmentBar(250, 40);
@@ -3700,12 +3713,16 @@ namespace TheLifeSimulator
                     howtoplaylabel.Visible = false;
                     instructionlabel.Visible = false;
 
+                    instructions.Visible = true;
+                    instructions.Location = new Point(250, 430);
+                    instructions.Font = new Font("Courier New", 14);
+                    instructions.Text = "Press Y to chat";
+
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.levelonegirl;
                     Graphics interact = this.CreateGraphics();
                     Font font = new Font("Arial", 12);
                     SolidBrush drawBrush = new SolidBrush(Color.Black);
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
 
                 case 15:
@@ -3724,13 +3741,13 @@ namespace TheLifeSimulator
                     howtoplaylabel.Visible = false;
                     instructionlabel.Visible = false;
 
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
+                    instructions.Visible = true;
+                    instructions.Location = new Point(250, 430);
+                    instructions.Font = new Font("Courier New", 14);
+                    instructions.Text = "Press Y to chat";
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveloneguy;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
 
                     break;
                 case 16:
@@ -3748,13 +3765,14 @@ namespace TheLifeSimulator
                     howtoplaylabel.Visible = false;
                     instructionlabel.Visible = false;
 
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
+                    instructions.Visible = true;
+                    instructions.Location = new Point(250, 430);
+                    instructions.Font = new Font("Courier New", 14);
+                    instructions.Text = "Press Y to chat";
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwogirl;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
+                    
                     break; 
 
                 case 17:
@@ -3772,13 +3790,13 @@ namespace TheLifeSimulator
                     howtoplaylabel.Visible = false;
                     instructionlabel.Visible = false;
 
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
+                    instructions.Visible = true;
+                    instructions.Location = new Point(250, 430);
+                    instructions.Font = new Font("Courier New", 14);
+                    instructions.Text = "Press Y to chat";
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwoguy;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
                 case 18:
                     bankmoneyLabel.Visible = false;
@@ -3795,13 +3813,13 @@ namespace TheLifeSimulator
                     howtoplaylabel.Visible = false;
                     instructionlabel.Visible = false;
 
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
+                    instructions.Visible = true;
+                    instructions.Location = new Point(250, 430);
+                    instructions.Font = new Font("Courier New", 14);
+                    instructions.Text = "Press Y to chat";
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.levelonegirl;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
                 case 19:
                     bankmoneyLabel.Visible = false;
@@ -3818,13 +3836,13 @@ namespace TheLifeSimulator
                     howtoplaylabel.Visible = false;
                     instructionlabel.Visible = false;
 
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
+                    instructions.Visible = true;
+                    instructions.Location = new Point(250, 430);
+                    instructions.Font = new Font("Courier New", 14);
+                    instructions.Text = "Press Y to chat";
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveloneguy;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
 
                 case 20:
@@ -3842,13 +3860,13 @@ namespace TheLifeSimulator
                     howtoplaylabel.Visible = false;
                     instructionlabel.Visible = false;
 
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
+                    instructions.Visible = true;
+                    instructions.Location = new Point(250, 430);
+                    instructions.Font = new Font("Courier New", 14);
+                    instructions.Text = "Press Y to chat";
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwogirl;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
 
                 case 21:
@@ -3866,166 +3884,279 @@ namespace TheLifeSimulator
                     howtoplaylabel.Visible = false;
                     instructionlabel.Visible = false;
 
+                    instructions.Visible = true;
+                    instructions.Location = new Point(250, 430);
+                    instructions.Font = new Font("Courier New", 14);
+                    instructions.Text = "Press Y to chat";
+
+                    otherImage.Visible = true;
+                    otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwoguy;
+                    break;
+
+                //Interaction Reaction
+                case 22:
+                    bankmoneyLabel.Visible = false;
+                    bankLabel.Visible = false;
+                    workperfLabel.Visible = false;
+                    hungerlabel.Visible = false;
+                    hygienelabel.Visible = false;
+                    loolabel.Visible = false;
+                    entertainmentlabel.Visible = false;
+                    imageO.Visible = false;
+                    imageT.Visible = false;
+                    titleLabel.Visible = false;
+                    startLabel.Visible = false;
+                    howtoplaylabel.Visible = false;
+                    instructionlabel.Visible = false;
+                    instructions.Visible = false;
+
+                    interact = this.CreateGraphics();
+                    font = new Font("Arial", 12);
+                    drawBrush = new SolidBrush(Color.Black);
+
+                    otherImage.Visible = true;
+                    otherImage.Image = TheLifeSimulator.Properties.Resources.levelonegirl;
+
+                    if (hygiene > 20 && hunger > 50 && bankSavings > 250)
+                    {
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                    }
+                    else
+                    {
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                    }
+                    break;
+                case 23:
+                    bankmoneyLabel.Visible = false;
+                    bankLabel.Visible = false;
+                    workperfLabel.Visible = false;
+                    hungerlabel.Visible = false;
+                    hygienelabel.Visible = false;
+                    loolabel.Visible = false;
+                    entertainmentlabel.Visible = false;
+                    imageO.Visible = false;
+                    imageT.Visible = false;
+                    titleLabel.Visible = false;
+                    startLabel.Visible = false;
+                    howtoplaylabel.Visible = false;
+                    instructionlabel.Visible = false;
+                    instructions.Visible = false;
+
+                    interact = this.CreateGraphics();
+                    font = new Font("Arial", 12);
+                    drawBrush = new SolidBrush(Color.Black);
+
+                    otherImage.Visible = true;
+                    otherImage.Image = TheLifeSimulator.Properties.Resources.leveloneguy;
+                    if (hygiene > 20 && hunger > 50 && bankSavings > 250)
+                    {
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                    }
+                    else
+                    {
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                    }
+                    break;
+                case 24:
+                    bankmoneyLabel.Visible = false;
+                    bankLabel.Visible = false;
+                    workperfLabel.Visible = false;
+                    hungerlabel.Visible = false;
+                    hygienelabel.Visible = false;
+                    loolabel.Visible = false;
+                    entertainmentlabel.Visible = false;
+                    imageO.Visible = false;
+                    imageT.Visible = false;
+                    titleLabel.Visible = false;
+                    startLabel.Visible = false;
+                    howtoplaylabel.Visible = false;
+                    instructionlabel.Visible = false;
+                    instructions.Visible = false;
+
+                    interact = this.CreateGraphics();
+                    font = new Font("Arial", 12);
+                    drawBrush = new SolidBrush(Color.Black);
+
+                    otherImage.Visible = true;
+                    otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwogirl;
+                    if (hygiene > 20 && hunger > 50 && bankSavings > 750)
+                    {
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                    }
+                    else
+                    {
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                    }
+                    break;
+                case 25:
+                    bankmoneyLabel.Visible = false;
+                    bankLabel.Visible = false;
+                    workperfLabel.Visible = false;
+                    hungerlabel.Visible = false;
+                    hygienelabel.Visible = false;
+                    loolabel.Visible = false;
+                    entertainmentlabel.Visible = false;
+                    imageO.Visible = false;
+                    imageT.Visible = false;
+                    titleLabel.Visible = false;
+                    startLabel.Visible = false;
+                    howtoplaylabel.Visible = false;
+                    instructionlabel.Visible = false;
+                    instructions.Visible = false;
+
                     interact = this.CreateGraphics();
                     font = new Font("Arial", 12);
                     drawBrush = new SolidBrush(Color.Black);
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwoguy;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
-                    break;
-
-                //Interaction Reaction
-                case 22:
-                    imageT.Size = new Size(746, 385);
-                    imageT.Image = TheLifeSimulator.Properties.Resources.levelonegirl;
-                    instructionlabel.Visible = true;
-                    startLabel.Visible = true;
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
-                    if (hygiene > 20 && hunger > 50 && bankSavings > 250)
-                    {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
-                    }
-                    else
-                    {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
-                    }
-                    break;
-                case 23:
-                    imageT.Size = new Size(746, 385);
-                    imageT.Image = TheLifeSimulator.Properties.Resources.leveloneguy;
-                    instructionlabel.Visible = true;
-                    startLabel.Visible = true;
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
-                    if (hygiene > 20 && hunger > 50 && bankSavings > 250)
-                    {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
-                    }
-                    else
-                    {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
-                    }
-                    break;
-                case 24:
-                    imageT.Size = new Size(746, 385);
-                    imageT.Image = TheLifeSimulator.Properties.Resources.leveltwogirl;
-                    instructionlabel.Visible = true;
-                    startLabel.Visible = true;
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
                     if (hygiene > 20 && hunger > 50 && bankSavings > 750)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
-                    }
-                    break;
-                case 25:
-                    imageT.Size = new Size(746, 385);
-                    imageT.Image = TheLifeSimulator.Properties.Resources.leveltwoguy;
-                    instructionlabel.Visible = true;
-                    startLabel.Visible = true;
-                    interact = this.CreateGraphics();
-                    font = new Font("Arial", 12);
-                    drawBrush = new SolidBrush(Color.Black);
-                    if (hygiene > 20 && hunger > 50 && bankSavings > 750)
-                    {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
-                    }
-                    else
-                    {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     break;
                 case 26:
-                    imageT.Size = new Size(746, 385);
-                    imageT.Image = TheLifeSimulator.Properties.Resources.levelonegirl;
-                    instructionlabel.Visible = true;
-                    startLabel.Visible = true;
+                    bankmoneyLabel.Visible = false;
+                    bankLabel.Visible = false;
+                    workperfLabel.Visible = false;
+                    hungerlabel.Visible = false;
+                    hygienelabel.Visible = false;
+                    loolabel.Visible = false;
+                    entertainmentlabel.Visible = false;
+                    imageO.Visible = false;
+                    imageT.Visible = false;
+                    titleLabel.Visible = false;
+                    startLabel.Visible = false;
+                    howtoplaylabel.Visible = false;
+                    instructionlabel.Visible = false;
+                    instructions.Visible = false;
+
                     interact = this.CreateGraphics();
                     font = new Font("Arial", 12);
                     drawBrush = new SolidBrush(Color.Black);
+
+                    otherImage.Visible = true;
+                    otherImage.Image = TheLifeSimulator.Properties.Resources.levelonegirl;
                     if (hygiene > 20 && hunger > 50 && bankSavings > 250)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     break;
                 case 27:
-                    imageT.Size = new Size(746, 385);
-                    imageT.Image = TheLifeSimulator.Properties.Resources.leveloneguy;
-                    instructionlabel.Visible = true;
-                    startLabel.Visible = true;
+                    bankmoneyLabel.Visible = false;
+                    bankLabel.Visible = false;
+                    workperfLabel.Visible = false;
+                    hungerlabel.Visible = false;
+                    hygienelabel.Visible = false;
+                    loolabel.Visible = false;
+                    entertainmentlabel.Visible = false;
+                    imageO.Visible = false;
+                    imageT.Visible = false;
+                    titleLabel.Visible = false;
+                    startLabel.Visible = false;
+                    howtoplaylabel.Visible = false;
+                    instructionlabel.Visible = false;
+                    instructions.Visible = false;
+
                     interact = this.CreateGraphics();
                     font = new Font("Arial", 12);
                     drawBrush = new SolidBrush(Color.Black);
+
+                    otherImage.Visible = true;
+                    otherImage.Image = TheLifeSimulator.Properties.Resources.leveloneguy;
                     if (hygiene > 20 && hunger > 50 && bankSavings > 250)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     break;
                 case 28:
-                    imageT.Size = new Size(746, 385);
-                    imageT.Image = TheLifeSimulator.Properties.Resources.leveltwogirl;
-                    instructionlabel.Visible = true;
-                    startLabel.Visible = true;
+                    bankmoneyLabel.Visible = false;
+                    bankLabel.Visible = false;
+                    workperfLabel.Visible = false;
+                    hungerlabel.Visible = false;
+                    hygienelabel.Visible = false;
+                    loolabel.Visible = false;
+                    entertainmentlabel.Visible = false;
+                    imageO.Visible = false;
+                    imageT.Visible = false;
+                    titleLabel.Visible = false;
+                    startLabel.Visible = false;
+                    howtoplaylabel.Visible = false;
+                    instructionlabel.Visible = false;
+                    instructions.Visible = false;
+
                     interact = this.CreateGraphics();
                     font = new Font("Arial", 12);
                     drawBrush = new SolidBrush(Color.Black);
+
+                    otherImage.Visible = true;
+                    otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwogirl;
                     if (hygiene > 20 && hunger > 50 && bankSavings > 750)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     break;
                 case 29:
-                    imageT.Size = new Size(746, 385);
-                    imageT.Image = TheLifeSimulator.Properties.Resources.leveltwoguy;
-                    instructionlabel.Visible = true;
-                    startLabel.Visible = true;
+                    bankmoneyLabel.Visible = false;
+                    bankLabel.Visible = false;
+                    workperfLabel.Visible = false;
+                    hungerlabel.Visible = false;
+                    hygienelabel.Visible = false;
+                    loolabel.Visible = false;
+                    entertainmentlabel.Visible = false;
+                    imageO.Visible = false;
+                    imageT.Visible = false;
+                    titleLabel.Visible = false;
+                    startLabel.Visible = false;
+                    howtoplaylabel.Visible = false;
+                    instructionlabel.Visible = false;
+                    instructions.Visible = false;
+
                     interact = this.CreateGraphics();
                     font = new Font("Arial", 12);
                     drawBrush = new SolidBrush(Color.Black);
+
+                    otherImage.Visible = true;
+                    otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwoguy;
                     if (hygiene > 20 && hunger > 50 && bankSavings > 750)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 430);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
                     }
                     break;
 
