@@ -171,9 +171,9 @@
             // 
             // otherImage
             // 
-            this.otherImage.Location = new System.Drawing.Point(50, 20);
+            this.otherImage.Location = new System.Drawing.Point(12, 5);
             this.otherImage.Name = "otherImage";
-            this.otherImage.Size = new System.Drawing.Size(746, 385);
+            this.otherImage.Size = new System.Drawing.Size(1000, 500);
             this.otherImage.TabIndex = 13;
             this.otherImage.Visible = false;
             // 

@@ -1411,6 +1411,13 @@ namespace TheLifeSimulator
                 mainCharacter = new Rectangle(drawX, drawY, 20, 20);
 
             }
+            //if (scene != 1 || scene != 2 || scene != 3 || scene != 4 || scene != 5 || scene != 6 || scene != 7 
+            //    || scene != 8 || scene != 9 || scene != 10 || scene != 11 || scene != 12 || scene != 13)
+            //{
+            //    fill = new SolidBrush(Color.AntiqueWhite);
+            //    e.Graphics.FillRectangle(fill, 12, 5, 746, 385);
+            //}
+
         }
         private void mainMenu_KeyUp(object sender, KeyEventArgs e)
         {
@@ -3698,7 +3705,7 @@ namespace TheLifeSimulator
                     Graphics interact = this.CreateGraphics();
                     Font font = new Font("Arial", 12);
                     SolidBrush drawBrush = new SolidBrush(Color.Black);
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 450);
+                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
 
                 case 15:
@@ -3723,7 +3730,7 @@ namespace TheLifeSimulator
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveloneguy;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 450);
+                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
 
                     break;
                 case 16:
@@ -3747,7 +3754,7 @@ namespace TheLifeSimulator
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwogirl;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 450);
+                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break; 
 
                 case 17:
@@ -3771,7 +3778,7 @@ namespace TheLifeSimulator
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwoguy;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 450);
+                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
                 case 18:
                     bankmoneyLabel.Visible = false;
@@ -3794,7 +3801,7 @@ namespace TheLifeSimulator
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.levelonegirl;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 450);
+                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
                 case 19:
                     bankmoneyLabel.Visible = false;
@@ -3817,7 +3824,7 @@ namespace TheLifeSimulator
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveloneguy;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 450);
+                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
 
                 case 20:
@@ -3841,7 +3848,7 @@ namespace TheLifeSimulator
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwogirl;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 450);
+                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
 
                 case 21:
@@ -3865,7 +3872,7 @@ namespace TheLifeSimulator
 
                     otherImage.Visible = true;
                     otherImage.Image = TheLifeSimulator.Properties.Resources.leveltwoguy;
-                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 450);
+                    interact.DrawString("Press Y to chat", Font, drawBrush, 100, 550);
                     break;
 
                 //Interaction Reaction
@@ -3879,13 +3886,13 @@ namespace TheLifeSimulator
                     drawBrush = new SolidBrush(Color.Black);
                     if (hygiene > 20 && hunger > 50 && bankSavings > 250)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     break;
                 case 23:
@@ -3898,13 +3905,13 @@ namespace TheLifeSimulator
                     drawBrush = new SolidBrush(Color.Black);
                     if (hygiene > 20 && hunger > 50 && bankSavings > 250)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     break;
                 case 24:
@@ -3917,13 +3924,13 @@ namespace TheLifeSimulator
                     drawBrush = new SolidBrush(Color.Black);
                     if (hygiene > 20 && hunger > 50 && bankSavings > 750)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     break;
                 case 25:
@@ -3936,13 +3943,13 @@ namespace TheLifeSimulator
                     drawBrush = new SolidBrush(Color.Black);
                     if (hygiene > 20 && hunger > 50 && bankSavings > 750)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     break;
                 case 26:
@@ -3955,13 +3962,13 @@ namespace TheLifeSimulator
                     drawBrush = new SolidBrush(Color.Black);
                     if (hygiene > 20 && hunger > 50 && bankSavings > 250)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     break;
                 case 27:
@@ -3974,13 +3981,13 @@ namespace TheLifeSimulator
                     drawBrush = new SolidBrush(Color.Black);
                     if (hygiene > 20 && hunger > 50 && bankSavings > 250)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     break;
                 case 28:
@@ -3993,13 +4000,13 @@ namespace TheLifeSimulator
                     drawBrush = new SolidBrush(Color.Black);
                     if (hygiene > 20 && hunger > 50 && bankSavings > 750)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     break;
                 case 29:
@@ -4012,13 +4019,13 @@ namespace TheLifeSimulator
                     drawBrush = new SolidBrush(Color.Black);
                     if (hygiene > 20 && hunger > 50 && bankSavings > 750)
                     {
-                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Character accepts to chat with you", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     else
                     {
-                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 450);
-                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 470);
+                        interact.DrawString("Your character is rejected", Font, drawBrush, 100, 550);
+                        interact.DrawString("Press U to escape", Font, drawBrush, 100, 590);
                     }
                     break;
 
